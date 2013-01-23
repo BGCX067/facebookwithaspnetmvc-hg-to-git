@@ -1,0 +1,59 @@
+﻿@using Facebook.Presentation.Web.Utils
+@model Facebook.Presentation.Web.ViewModels.User.UserViewModel
+
+@{
+    var ajaxOpt = new AjaxOptions
+                      {
+                          UpdateTargetId = "container",
+                          InsertionMode = InsertionMode.Replace,
+                      };
+}
+
+<section id="container" class="content-wrapper">
+    
+    @{ Html.RenderAction("Index", "Posts", new { page = 1, count = 10 }); }
+
+</section>
+
+
+@section sidebar
+{
+    <section class="sidebar">
+        <ol class="menu">
+            
+             <li class="menu-item">
+                @Ajax.ActionLink("Posts", "Index", "Posts", new { page = 1, count = 10 }, ajaxOpt, new { @class = "menu-item-link" })
+            </li>
+            <li class="menu-item">
+                @Ajax.ActionLink("Messages", "Index", "Messages", new { page = 1, count = 10 }, ajaxOpt, new { @class = "menu-item-link" })
+            </li>
+            <li class="menu-item">
+                @Ajax.ActionLink("Notifications", "Index", "Notifications", new { page = 1, count = 10 }, ajaxOpt, new { @class = "menu-item-link" })
+            </li>
+            <li class="menu-item">
+                @Ajax.ActionLink("Find Friends", "FindFriends", "User", new { page = 1, count = 10 }, ajaxOpt, new { @class = "menu-item-link" })
+            </li>
+             @*<li class="menu-item">
+                @Html.ActionLink("Messages", "Index", "Messages", new  {Page = 1, Count = 10}, new {@class = "menu-item-link"})
+            </li>
+            <li class="menu-item">
+                @Html.ActionLink("Notifications", "Index", "Notifications", new { page = 1, count = 10 }, new { @class = "menu-item-link" })
+            </li>
+            <li class="menu-item">
+                @Html.ActionLink("Find Friends", "GetPossiblesFriends", "User", new { page = 1, count = 10 }, new { @class = "menu-item-link" })
+            </li>*@
+        </ol>
+    </section>
+}
+
+@section featured
+{
+    <section class="featured">
+        <img src="@Url.Action("GetImageFromId", "Images", new { id = Model.Photo.ImgId })" alt="@Model.Photo.Description"/>    
+        <h3>@Html.UserName(Model)</h3>
+        <div class="cleaner"></div>
+    </section>
+}
+
+
+

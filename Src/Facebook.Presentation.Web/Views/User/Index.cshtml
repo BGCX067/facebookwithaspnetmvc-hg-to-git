@@ -1,0 +1,44 @@
+﻿@using Facebook.Business.Domain
+@using Facebook.Presentation.Web.Utils
+@using Facebook.Presentation.Web.ViewModels
+@model Facebook.Presentation.Web.ViewModels.User.UserViewModel
+
+
+<section id="container" class="content-wrapper">
+
+    @{ Html.RenderAction("GetPosts", "Posts", new { userId = Model.Id, page = 1, count = 10 }); }
+
+</section>
+
+
+
+
+@section featured
+{
+    <section class="featured">
+        <img src="@Url.Action("GetImageFromId", "Images", new { id = Model.Photo.ImgId })" alt="@Model.Photo.Description" class="float-left" width="100" height="100"/>
+        <h3>@Html.UserName(Model)</h3>
+
+        @if (Model.FriendshipStatus == FriendshipStatus.NoRelation)
+        {
+            var formId = "add-friend-form" + Model.Id;
+            var processingId = "processing" + Model.Id;
+
+            using (Ajax.BeginForm("AddFriend",
+                                  "User",
+                                  new { userId = Model.Id },
+                                  new AjaxOptions
+                                  {
+                                      UpdateTargetId = formId,
+                                      InsertionMode = InsertionMode.Replace,
+                                      LoadingElementId = processingId,
+                                  },
+                              new { id = formId, @class = "add-friend-form" }))
+            {
+                <input type="submit" value="Add Friend" />
+                <img src="~/Images/GsNJNwuI-UM.gif" style="display: none" id="@processingId"/>
+            }
+        }
+        <div class="cleaner"></div>
+    </section>
+}

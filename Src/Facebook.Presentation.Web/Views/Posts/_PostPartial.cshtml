@@ -1,0 +1,17 @@
+﻿@using Facebook.Presentation.Web.Utils
+@model Facebook.Presentation.Web.ViewModels.Posts.PostViewModel
+
+
+
+<div class="post" id ="last-post">
+    <h3>@Html.UserName(Model.Author)</h3>
+    <br/>
+    <div>
+        @Html.DisplayFor(model => model.Text)
+    </div>
+    <br/>
+    @{
+        Html.RenderPartial("_CommentsPartial", Model.Comments, new ViewDataDictionary { { "ActionName", "Comment" }, { "ControllerName", "Posts" } });
+    }  
+</div>
+

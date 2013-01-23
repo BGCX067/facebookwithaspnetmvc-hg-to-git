@@ -1,0 +1,56 @@
+﻿@model Facebook.Presentation.Web.ViewModels.User.UserProfileViewModel
+
+@using (Html.BeginForm("Profile", "User", FormMethod.Post, new { @class = "profile-edit-form", enctype = "multipart/form-data" }))
+{
+    <div class="personal-info-edit">
+        @Html.LabelFor(model => model.AboutMe)
+        @Html.EditorFor(model => model.AboutMe)
+        <br/>
+
+        @Html.LabelFor(model => model.BirthDay)
+        @Html.EditorFor(model => model.BirthDay)
+        <br/>
+
+        @Html.LabelFor(model => model.HomeTown)
+        @Html.EditorFor(model => model.HomeTown)
+        <br/>
+
+        @Html.LabelFor(model => model.LookingForFriendship)
+        @Html.EditorFor(model => model.LookingForFriendship)
+        <br/>
+
+        @Html.LabelFor(model => model.LookingForRelationship)
+        @Html.EditorFor(model => model.LookingForRelationship)
+        <br/>
+
+        @Html.LabelFor(model => model.InterestedInMen)
+        @Html.EditorFor(model => model.InterestedInMen)
+        <br/>
+
+        @Html.LabelFor(model => model.InterestedInWomen)
+        @Html.EditorFor(model => model.InterestedInWomen)
+    </div>
+    
+    <div class="contact-info-edit">
+        @Html.LabelFor(model => model.EMail)
+        @Html.EditorFor(model => model.EMail)
+        @Html.LabelFor(model => model.EMailOnlyForFriends)
+        @Html.EditorFor(model => model.EMailOnlyForFriends)
+        <br/>
+        
+        @Html.LabelFor(model => model.MobileNumber)
+        @Html.EditorFor(model => model.MobileNumber)
+        @Html.LabelFor(model => model.MobileNumberOnlyForFriends)
+        @Html.EditorFor(model => model.MobileNumberOnlyForFriends)
+        <br/>
+        
+        <div class="address-info-edit">
+            @Html.LabelFor(model => model.Country)
+            @Html.EditorFor(model => model.Country)
+        </div>
+    </div>
+    
+    <input type="file" name="Image" class="file-input"/>
+    
+    <input type="submit" value="OK"/>
+}

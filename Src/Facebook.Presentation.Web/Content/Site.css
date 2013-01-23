@@ -1,0 +1,462 @@
+﻿.content-wrapper {
+    margin: 0 auto;
+    max-width: 960px;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.cleaner {
+    clear: both;
+}
+
+body {
+    background-color: white; /*temporal background color to enhance visibility */
+}
+
+header, footer, hgroup, nav, section, .featured {
+    display: block; 
+
+}
+
+a {
+    text-decoration: none;
+}
+
+#sidebar {
+    width: 20%;
+    border-left-width: 1px;
+    border-left-color: black;
+    border-left-style: solid;
+    border-right-width: 1px;
+    border-right-color: black;
+    border-right-style: solid;
+    border-top-width: 1px;
+    border-top-color: black;
+    border-top-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: black;
+    border-bottom-style: solid;
+}
+
+#main-content {
+    width: 80%;
+    border-left-width: 1px;
+    border-left-color: black;
+    border-left-style: solid;
+    border-right-width: 1px;
+    border-right-color: black;
+    border-right-style: solid;
+    border-top-width: 1px;
+    border-top-color: black;
+    border-top-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: black;
+    border-bottom-style: solid;
+}
+
+#main-content-alone {
+    border-left-width: 1px;
+    border-left-color: black;
+    border-left-style: solid;
+    border-right-width: 1px;
+    border-right-color: black;
+    border-right-style: solid;
+    border-top-width: 1px;
+    border-top-color: black;
+    border-top-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: black;
+    border-bottom-style: solid;
+    width: 100%;
+}
+
+/*#region featured*/
+
+.featured {
+    background-color: orange;
+    width: 100%;
+
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.featured img {
+    width: 100px;
+    height: 100px;
+    float: left;
+    border-left-width: 1px;
+    border-left-color: black;
+    border-left-style: solid;
+    border-right-width: 1px;
+    border-right-color: black;
+    border-right-style: solid;
+    border-top-width: 1px;
+    border-top-color: black;
+    border-top-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: black;
+    border-bottom-style: solid;
+    margin: 3px;
+}
+
+.featured .user-name {
+    font-size: 1.15em;
+    float: left;
+    font-family: sans-serif;
+    padding-left: 20px;
+}
+
+/*#endregion*/
+
+/*#region header*/
+
+header {
+    background-color: rgb(59, 89, 151);
+
+    border-left-width: 1px;
+    border-left-color: black;
+    border-left-style: solid;
+    border-right-width: 1px;
+    border-right-color: black;
+    border-right-style: solid;
+    border-top-width: 1px;
+    border-top-color: black;
+    border-top-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: black;
+    border-bottom-style: solid;
+}
+
+    header ul#menu {
+        font-size: 1.3em;
+        font-weight: 300;
+        margin: 0 0 5px;
+    }
+
+        header ul#menu li a {
+            color: white;
+        }
+
+            header ul#menu li a:hover {
+                color: black;
+            }
+
+/*#endregion*/
+
+/*#region sidebar*/
+
+
+
+#sidebar .menu {
+    font-size: 1.3em;
+    font-weight: 600;
+    margin: 0 auto;
+    padding: 2px;
+    text-align: center;
+}
+
+#sidebar .menu .menu-item {
+    list-style: none;
+}
+
+#sidebar .menu .menu-item .menu-item-link {
+    text-decoration: none;
+}
+
+/*#endregion*/
+
+/*#region footer*/
+
+footer {
+    
+    background-color: rgb(59, 89, 151);
+    clear: both;
+
+    border-left-width: 1px;
+    border-left-color: black;
+    border-left-style: solid;
+    border-right-width: 1px;
+    border-right-color: black;
+    border-right-style: solid;
+    border-top-width: 1px;
+    border-top-color: black;
+    border-top-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: black;
+    border-bottom-style: solid;
+}
+
+/*#endregion*/
+
+/*#region site title*/
+
+.site-title {
+    color: white;
+    font-family: Rockwell, Consolas, "Courier New", Courier, monospace;
+    font-size: 2.3em;
+    margin: 0;
+}
+
+    .site-title a, .site-title a:hover, .site-title a:active {
+        background: none;
+        color: white;
+        outline: none;
+        text-decoration: none;
+    }
+
+/*#endregion*/
+
+/* #region menu*/
+
+ul#menu {
+    font-size: 1.3em;
+    font-weight: 600;
+    margin: 0 0 5px;
+    padding: 0;
+    text-align: right;
+}
+
+    ul#menu li {
+        display: inline;
+        list-style: none;
+        padding-left: 15px;
+    }
+
+        ul#menu li a {
+            background: none;
+            color: #999;
+            text-decoration: none;
+        }
+
+            ul#menu li a:hover {
+                color: #333;
+                text-decoration: none;
+            }
+
+/*#endregion*/
+
+/*#region login page */
+
+#loginForm {
+    /*border-right: solid 2px #c8c8c8;*/
+    /*background-color: red;*/
+    /*margin: 10px;*/
+    padding: 10px;
+    margin: 0 auto;
+    /*float: left;*/
+    width: 100%;
+}
+
+    #loginForm .validation-error {
+        display: block;
+        margin-left: 15px;
+    }
+
+    #loginForm .validation-summary-errors ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    #loginForm .validation-summary-errors li {
+        display: inline;
+        list-style: none;
+        margin: 0;
+    }
+
+    #loginForm input {
+        width: 250px;
+    }
+
+        #loginForm input[type="checkbox"], #loginForm input[type="submit"], #loginForm input[type="button"], #loginForm button {
+            width: auto;
+        }
+
+/*#endregion*/
+
+/*#region forms */
+
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+    fieldset legend {
+        display: none;
+    }
+
+    fieldset ol {
+        padding: 0;
+        list-style: none;
+    }
+
+        fieldset ol li {
+            padding-bottom: 5px;
+        }
+
+label {
+    display: block;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+    label.checkbox {
+        display: inline;
+    }
+
+input, textarea {
+    border: 1px solid #e2e2e2;
+    background: #fff;
+    color: #333;
+    font-size: 1.2em;
+    margin: 5px 0 6px 0;
+    padding: 5px;
+    width: 300px;
+}
+
+textarea {
+    font-family: inherit;
+    width: 500px;
+}
+
+    input:focus, textarea:focus {
+        border: 1px solid #7ac0da;
+    }
+
+input[type="checkbox"] {
+    background: transparent;
+    border: inherit;
+    width: auto;
+}
+
+input[type="submit"], input[type="button"], button {
+    background-color: #d3dce0;
+    border: 1px solid #787878;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: 600;
+    padding: 7px;
+    margin-right: 8px;
+    width: auto;
+}
+
+td input[type="submit"], td input[type="button"], td button {
+    font-size: 1em;
+    padding: 4px;
+    margin-right: 4px;
+}
+
+/*#endregion*/
+
+/*#region post*/
+
+.post {
+    border-left-width: 1px;
+    border-left-color: black;
+    border-left-style: solid;
+    border-right-width: 1px;
+    border-right-color: black;
+    border-right-style: solid;
+    border-top-width: 1px;
+    border-top-color: black;
+    border-top-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: black;
+    border-bottom-style: solid;
+    padding: 5px;
+    margin: 3px;
+    background-color: rgb(239, 239, 239);
+}
+
+.new-post-form {
+    
+}
+
+#post-creation-text-input {
+    
+    width: 100%;
+}
+
+/*#endregion*/
+
+/*#region comment*/
+
+.comment {
+    border-left-width: 1px;
+    border-left-color: black;
+    border-left-style: solid;
+    border-right-width: 1px;
+    border-right-color: black;
+    border-right-style: solid;
+    border-top-width: 1px;
+    border-top-color: black;
+    border-top-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: black;
+    border-bottom-style: solid;
+    padding: 5px;
+    margin: 3px;
+    background-color: white
+}
+
+.new-comment-form {
+    
+}
+
+/*#endregion*/
+
+.user-name {
+    
+}
+
+
+.add-friend-form {
+    
+}
+
+.add-friend-form input {
+    border: none;
+    padding: 5px;
+    margin: 3px;
+}
+
+.notification {
+    
+}
+
+.message {
+    
+}
+
+.personal-info-edit {
+    background-color: gainsboro;
+}
+
+.address-info-edit {
+    background-color: honeydew;
+}
+
+.contact-info-edit {
+    background-color: ghostwhite;
+}
+
+.profile-edit-form {
+    padding: 5px;
+    margin: 3px;
+}
+
+.profile-edit-form * {
+    padding: 3px;
+    margin: 2px;
+}
+
+.file-input {
+    background-color: ivory;
+    display: block;
+}

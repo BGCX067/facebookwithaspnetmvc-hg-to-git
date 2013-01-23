@@ -1,0 +1,57 @@
+﻿@model Facebook.Presentation.Web.ViewModels.Account.RegisterViewModel
+
+<section id="loginForm">
+
+    @using (Html.BeginForm("Register", "Account", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+
+        <fieldset>
+            <legend>Register Form</legend>
+            <ol>
+                <li>
+                    @Html.LabelFor(info => info.FirstName)
+                    @Html.TextBoxFor(info => info.FirstName)
+                    @Html.ValidationMessageFor(info => info.FirstName)
+                </li>
+                <li>
+                    @Html.LabelFor(info => info.LastName)
+                    @Html.TextBoxFor(info => info.LastName)
+                    @Html.ValidationMessageFor(info => info.LastName)
+                </li>
+                <li>
+                    @Html.LabelFor(m => m.Email)
+                    @Html.TextBoxFor(m => m.Email)
+                    @Html.ValidationMessageFor(m => m.Email)
+                </li>
+                <li>
+                    @Html.LabelFor(m => m.Password)
+                    @Html.PasswordFor(m => m.Password)
+                    @Html.ValidationMessageFor(m => m.Password)
+                </li>
+                <li>
+                    @Html.LabelFor(m => m.ConfirmPassword)
+                    @Html.PasswordFor(m => m.ConfirmPassword)
+                    @Html.ValidationMessageFor(m => m.ConfirmPassword)
+                </li>
+                <li>
+                    @Html.LabelFor(m => m.SecurityQuestion)
+                    @Html.PasswordFor(m => m.SecurityQuestion)
+                    @Html.ValidationMessageFor(m => m.SecurityQuestion)
+                </li>
+                <li>
+                    @Html.LabelFor(m => m.SecurityAnswer)
+                    @Html.PasswordFor(m => m.SecurityAnswer)
+                    @Html.ValidationMessageFor(m => m.SecurityAnswer)
+                </li>
+            </ol>
+            <input type="submit" value="Register" />
+        </fieldset>
+    }
+
+</section>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

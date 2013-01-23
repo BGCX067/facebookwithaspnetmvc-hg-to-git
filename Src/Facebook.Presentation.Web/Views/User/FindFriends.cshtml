@@ -1,0 +1,42 @@
+﻿@using Facebook.Business.Domain
+@using Facebook.Presentation.Web.Utils
+@model IList<Facebook.Presentation.Web.ViewModels.User.UserViewModel>
+
+
+
+
+@foreach (var user in Model)
+{
+    <div>
+
+        <div class="float-left">
+            @Html.UserName(user)
+        </div>
+
+        @{
+            var formId = "add-friend-form" + user.Id;
+            var loadingId = "loading" + user.Id;
+            var processingId = "processing" + user.Id;
+            var action = user.FriendshipStatus == FriendshipStatus.NoRelation ? "AddFriend" : "AcceptFriend";
+            var value = user.FriendshipStatus == FriendshipStatus.NoRelation ? "Add Friend" : "Accept Friend";
+        }
+        @using (Ajax.BeginForm(action,
+                               "User",
+                               new { userId = user.Id },
+                               new AjaxOptions
+                                   {
+                                      UpdateTargetId = formId,
+                                      InsertionMode = InsertionMode.Replace,
+                                      LoadingElementId = processingId,
+                                   },
+                              new { id = formId, @class = "add-friend-form" }))
+        {
+            <input type="submit" value="@value" />
+            <img src="~/Images/GsNJNwuI-UM.gif" style="display: none" id="@processingId"/>
+        }
+
+    </div>
+    
+    <div class="cleaner"></div>
+}
+

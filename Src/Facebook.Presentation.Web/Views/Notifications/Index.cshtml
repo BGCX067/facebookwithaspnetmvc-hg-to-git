@@ -1,0 +1,8 @@
+﻿@model List<Facebook.Presentation.Web.ViewModels.Notifications.NotificationViewModel>
+
+@foreach(var noty in Model)
+{
+    <div class="notification">
+        <p>@noty.Text</p>
+    </div>
+}

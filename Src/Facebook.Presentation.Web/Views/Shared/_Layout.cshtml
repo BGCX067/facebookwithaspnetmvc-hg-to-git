@@ -1,0 +1,99 @@
+﻿@using Facebook.Data
+@using Facebook.Presentation.Web.Security;
+@using Facebook.Presentation.Web.Utils
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Facebook </title>
+
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    @Scripts.Render("~/Scripts/jquery-1.7.1.min.js")
+    @Scripts.Render("~/Scripts/jquery.unobtrusive-ajax.min.js")
+</head>
+
+<body>
+
+    <header>
+
+        <div class="content-wrapper">
+            <div class="float-left">
+                <p class="site-title">@Html.ActionLink("Facebook", "Home", "User")</p>
+            </div>
+            <div class="float-right">
+                <nav>
+                    <ul id="menu">
+                        @if (!Equals(DependencyResolver.Current.GetService<IUserProvider>().GetCurrentUserEmail(ViewContext.HttpContext), string.Empty))
+                        {
+                            //var user = DependencyResolver.Current.GetService<IUserProvider>()
+                            //    .GetCurrentUser(DependencyResolver.Current.GetService<IUnitOfWork>(), ViewContext.HttpContext);
+    
+                      
+                            <li>@Html.ActionLink("eric", "Profile", "User", null, new { @class = "username" })</li>
+                       
+                            <li>@Html.ActionLink("Home", "Home", "User") </li>
+                            <li>@Html.ActionLink("SignOut", "LogOff", "Account") </li>
+                         
+                        }
+                        else
+                        {
+                            <li>@Html.ActionLink("Log in", "Login", "Account")</li>
+                            <li>@Html.ActionLink("Register", "Register", "Account") </li>
+                        }
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="cleaner"></div>
+
+    </header>
+
+    <div id="body">
+
+        @if (IsSectionDefined("featured"))
+        {
+            @RenderSection("featured")
+
+            <div class="cleaner"></div>
+        }
+
+
+
+        @if (IsSectionDefined("sidebar"))
+        {
+            <div id="sidebar" class="float-left content-wrapper">
+                @RenderSection("sidebar")
+            </div>
+            
+            <div id="main-content" class="float-left content-wrapper">
+                @RenderBody()
+            </div>
+        }
+        else
+        {
+            <div id="main-content-alone" class="content-wrapper">
+                @RenderBody()
+            </div>
+        }
+
+    </div>
+
+    <footer style="clear: both">
+        <div class="content-wrapper">
+            <div class="float-left">
+                <p>&copy; @DateTime.Now.Year</p>
+            </div>
+        </div>
+        <div class="cleaner"></div>
+    </footer>
+
+    @RenderSection("scripts", required: false)
+</body>
+
+</html>

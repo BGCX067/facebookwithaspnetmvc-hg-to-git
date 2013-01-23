@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A672FFA3-6AC2-4F3F-BA4B-34BF90AD1E90}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Facebook.Data.EntityFramework</RootNamespace>
+    <AssemblyName>Facebook.Data.EntityFramework</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="FacebookContext.cs" />
+    <Compile Include="Mappings\AddressConfiguration.cs" />
+    <Compile Include="Mappings\CommentConfiguration.cs" />
+    <Compile Include="Mappings\ContactInformationConfiguration.cs" />
+    <Compile Include="Mappings\FriendshipRequestConfiguration.cs" />
+    <Compile Include="Mappings\MessageConfiguration.cs" />
+    <Compile Include="Mappings\NotificationConfiguration.cs" />
+    <Compile Include="Mappings\PersonalInformationConfiguration.cs" />
+    <Compile Include="Mappings\PostConfiguration.cs" />
+    <Compile Include="Mappings\UserAccountConfiguration.cs" />
+    <Compile Include="Mappings\UserProfileConfiguration.cs" />
+    <Compile Include="Repositories\FacebookKeyRepository.cs" />
+    <Compile Include="Repositories\FriendshipRequestRepository.cs" />
+    <Compile Include="Repositories\ImageRepository.cs" />
+    <Compile Include="Repositories\MessageRepository.cs" />
+    <Compile Include="Repositories\NotificationRepository.cs" />
+    <Compile Include="Repositories\PostRepository.cs" />
+    <Compile Include="Repositories\UserAccountRepository.cs" />
+    <Compile Include="Repository.cs" />
+    <Compile Include="UnitOfWork.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Facebook.Business.Domain.Facade\Facebook.Business.Domain.Facade.csproj">
+      <Project>{0ef2763e-f218-47e0-b84c-3e38dd2c3d44}</Project>
+      <Name>Facebook.Business.Domain.Facade</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Facebook.Business.Domain\Facebook.Business.Domain.csproj">
+      <Project>{d2444546-e38b-4e73-bc01-b8ec0d468cf6}</Project>
+      <Name>Facebook.Business.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Facebook.Data\Facebook.Data.csproj">
+      <Project>{cb71ca96-8286-40c2-b027-eca495f854fd}</Project>
+      <Name>Facebook.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Facebook.Infrastructure.Contracts\Facebook.Infrastructure.Contracts.csproj">
+      <Project>{4b8daa63-40e7-4a5e-96c2-2d21b0806bb3}</Project>
+      <Name>Facebook.Infrastructure.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Facebook.Infrastructure.Ioc\Facebook.Infrastructure.Ioc.csproj">
+      <Project>{a44aa0e3-2b23-4485-940e-013fc39307f4}</Project>
+      <Name>Facebook.Infrastructure.Ioc</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\CommonServiceLocator.1.0\lib\NET35\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Unity.2.1.505.2\lib\NET35\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration">
+      <HintPath>..\..\packages\Unity.2.1.505.2\lib\NET35\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data.Entity" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

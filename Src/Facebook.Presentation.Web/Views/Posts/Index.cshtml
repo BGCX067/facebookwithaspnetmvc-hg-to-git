@@ -1,0 +1,65 @@
+﻿@model Facebook.Presentation.Web.ViewModels.Posts.PostCollectionViewModel
+
+
+@*@using(Ajax.BeginForm("Create", "Posts", new AjaxOptions
+                                             {
+                                                 UpdateTargetId = "post-container",
+                                                 InsertionMode = InsertionMode.InsertBefore
+                                             }))
+{
+    @Html.TextArea("Text")
+    <input type="hidden" value="@Model.OwnerId" name="OwnerId"/>
+    <input type="submit" value="Post"/>
+}*@
+
+
+<form class="new-post-form">
+    
+    <textarea id="post-creation-text-input" name="Text" rows="10"> Write something ... </textarea>
+    <input type="hidden" value="@Model.OwnerId" id="post-creation-id-input"/>
+    <input type="submit" value="Post" id="post-creation-submit-input" />
+    
+
+    <script type="text/javascript">
+        $('#post-creation-submit-input').click(function (event) {
+            event.preventDefault();
+            var textData = $('#post-creation-text-input').val();
+            var ownerIdData = $('#post-creation-id-input').val();
+            var urlData = '@Url.Action("Create", "Posts")';
+            
+
+            $.ajax({
+                type: 'POST',
+                url: urlData,
+                data: { OwnerId: ownerIdData, Text: textData },
+                success: function (data) {
+                    
+                    $('#post-container').prepend(data);
+                    
+                    $('#post-container').find("script").each(function (i) {
+                    
+                        if (i == 0) {
+                            eval($(this).text());
+                        }
+                        
+                    });
+
+                    $('#post-creation-text-input').val("Write something ...");
+                },
+                
+                error: function () {
+                    alert("An error has occurred.");
+                }
+            });
+
+        });
+    </script>
+
+</form>
+
+<div id="post-container">
+    @foreach (var post in Model.Posts)
+    {
+        Html.RenderPartial("_PostPartial", post);
+    }
+</div>

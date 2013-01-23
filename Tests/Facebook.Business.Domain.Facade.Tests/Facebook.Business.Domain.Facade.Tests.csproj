@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{44BBEDA7-69E3-4629-A470-43B55E7654C0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Facebook.Business.Domain.Facade.Tests</RootNamespace>
+    <AssemblyName>Facebook.Business.Domain.Facade.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\..\packages\CommonServiceLocator.1.0\lib\NET35\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>..\..\packages\Unity.2.1.505.2\lib\NET35\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration">
+      <HintPath>..\..\packages\Unity.2.1.505.2\lib\NET35\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Moq">
+      <HintPath>..\..\packages\Moq.4.0.10827\lib\NET40\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\..\packages\NUnit.2.6.1\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Integration\KeyGenerationServiceTests.cs" />
+    <Compile Include="ObjectMother.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\Src\Facebook.Business.Domain.Facade\Facebook.Business.Domain.Facade.csproj">
+      <Project>{0ef2763e-f218-47e0-b84c-3e38dd2c3d44}</Project>
+      <Name>Facebook.Business.Domain.Facade</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Src\Facebook.Business.Domain\Facebook.Business.Domain.csproj">
+      <Project>{d2444546-e38b-4e73-bc01-b8ec0d468cf6}</Project>
+      <Name>Facebook.Business.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Src\Facebook.Data.EntityFramework\Facebook.Data.EntityFramework.csproj">
+      <Project>{a672ffa3-6ac2-4f3f-ba4b-34bf90ad1e90}</Project>
+      <Name>Facebook.Data.EntityFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Src\Facebook.Data.InMemory\Facebook.Data.InMemory.csproj">
+      <Project>{02ab4e5d-49ef-4d38-8b8f-dbd1a902f72a}</Project>
+      <Name>Facebook.Data.InMemory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Src\Facebook.Data\Facebook.Data.csproj">
+      <Project>{cb71ca96-8286-40c2-b027-eca495f854fd}</Project>
+      <Name>Facebook.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Src\Facebook.Infrastructure.Ioc\Facebook.Infrastructure.Ioc.csproj">
+      <Project>{a44aa0e3-2b23-4485-940e-013fc39307f4}</Project>
+      <Name>Facebook.Infrastructure.Ioc</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

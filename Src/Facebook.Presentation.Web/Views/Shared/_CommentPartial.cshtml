@@ -1,0 +1,10 @@
+﻿@using Facebook.Presentation.Web.Utils
+@model Facebook.Presentation.Web.ViewModels.CommentViewModel
+
+<div class="comment">
+    <h3>@Html.UserName(Model.Author)</h3>
+    <p>
+        @Model.Text
+    </p>
+
+</div>

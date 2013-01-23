@@ -1,0 +1,57 @@
+﻿@model Facebook.Presentation.Web.ViewModels.CommentCollectionViewModel
+@{
+    var commentContainerId = "comment-container-" + Model.OwnerId;
+    var commentCreationTextId = "comment-creation-text-input-" + Model.OwnerId;
+    var commentCreationOwnerId = "comment-creation-id-input-" + Model.OwnerId;
+    var commentCreationSubmitId = "comment-creation-submit-input-" + Model.OwnerId; 
+}
+
+<div id=@commentContainerId>
+    @foreach (var comment in Model.Comments)
+    {
+      
+        Html.RenderPartial("_CommentPartial", comment); 
+        
+    }
+</div>
+
+
+@*@using(Ajax.BeginForm((string)ViewData["ActionName"], (string)ViewData["ControllerName"], new { ownerId = Model.OwnerId }, new AjaxOptions
+                                                                      {
+                                                                          UpdateTargetId = @commentContainerId,
+                                                                          InsertionMode = InsertionMode.InsertAfter
+                                                                      }))
+{
+    @Html.TextArea("Text", "Comment ...", new { @class = "comment-input-text-area"})
+    <input type="submit" value="Comment"/>
+}*@
+
+<form class="new-comment-form">
+    
+    <input type="text" value="Write a comment ..." id="@commentCreationTextId" />
+    <input type="hidden" value="@Model.OwnerId" id="@commentCreationOwnerId"/>
+    <input type="submit" value="Comment" id="@commentCreationSubmitId" />
+
+    <script type="text/javascript">
+        $('#@commentCreationSubmitId').click(function (event) {
+            event.preventDefault();
+            var textData = $('#@commentCreationTextId').val();
+            var ownerIdData = $('#@commentCreationOwnerId').val();
+            var urlData = '@Url.Action((string)ViewData["ActionName"], (string)ViewData["ControllerName"])';
+
+            $.ajax({
+                type: 'POST',
+                url: urlData,
+                data: { ownerId: ownerIdData, text: textData },
+                success: function (data) {
+                    $('#@commentContainerId').append(data);
+                    $('#@commentCreationTextId').val("Write a comment ...");
+                },
+                error: function () {
+                    alert("Sorry, an error has ocurred ...");
+                }
+            });
+        });
+    </script>
+
+</form>

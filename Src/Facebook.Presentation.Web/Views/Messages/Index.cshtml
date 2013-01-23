@@ -1,0 +1,10 @@
+﻿@using Facebook.Presentation.Web.Utils
+@model IList<Facebook.Presentation.Web.ViewModels.Messages.MessageViewModel>
+
+@foreach(var message in Model)
+{
+    <div class="message">
+        <p>@Html.UserName(message.Sender)</p>
+        <p>@message.Text</p>
+    </div>
+}

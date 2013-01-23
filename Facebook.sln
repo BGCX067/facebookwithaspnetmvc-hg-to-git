@@ -1,0 +1,144 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Business", "Business", "{F37E3FB5-5B28-4385-9963-12843AF76ACC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{10B5481E-5212-4047-9F29-E00E6EC24F61}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{083F15E7-3200-4AC5-88EE-9D9E9829C2BB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{7CD48187-2B49-4019-B5B8-35931A4D9D2A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{26715751-0F3A-4491-A834-2DF0FEA1C5A3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Crosscutting", "Crosscutting", "{84E4733D-2FF0-4C64-A338-4ED15C47CC0B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ioc", "Ioc", "{97FBD77F-7C23-4BB1-B1B4-CD1E520F94EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facebook.Data", "Src\Facebook.Data\Facebook.Data.csproj", "{CB71CA96-8286-40C2-B027-ECA495F854FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facebook.Infrastructure.Ioc", "Src\Facebook.Infrastructure.Ioc\Facebook.Infrastructure.Ioc.csproj", "{A44AA0E3-2B23-4485-940E-013FC39307F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facebook.Business.Domain", "Src\Facebook.Business.Domain\Facebook.Business.Domain.csproj", "{D2444546-E38B-4E73-BC01-B8EC0D468CF6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facebook.Infrastructure.Crosscutting.Logging", "Src\Facebook.Infrastructure.Crosscutting.Logging\Facebook.Infrastructure.Crosscutting.Logging.csproj", "{F439B6EE-C6C1-471D-94CC-48FBF5F44CFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facebook.Infrastructure.Crosscutting.Logging.Log4net", "Src\Facebook.Infrastructure.Crosscutting.Logging.Log4net\Facebook.Infrastructure.Crosscutting.Logging.Log4net.csproj", "{4830AA13-EDFA-4611-AAAC-14B0EA8D532B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facebook.Data.EntityFramework", "Src\Facebook.Data.EntityFramework\Facebook.Data.EntityFramework.csproj", "{A672FFA3-6AC2-4F3F-BA4B-34BF90AD1E90}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Contracts", "Contracts", "{605BF081-6E37-4308-A2F5-53B6AA3A64F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facebook.Infrastructure.Contracts", "Src\Facebook.Infrastructure.Contracts\Facebook.Infrastructure.Contracts.csproj", "{4B8DAA63-40E7-4A5E-96C2-2D21B0806BB3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facebook.Data.InMemory", "Src\Facebook.Data.InMemory\Facebook.Data.InMemory.csproj", "{02AB4E5D-49EF-4D38-8B8F-DBD1A902F72A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facebook.Presentation.Web", "Src\Facebook.Presentation.Web\Facebook.Presentation.Web.csproj", "{FA144558-E880-4BC6-AF9B-D8BF10455D72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facebook.Presentation.Web.Tests", "Tests\Facebook.Presentation.Web.Tests\Facebook.Presentation.Web.Tests.csproj", "{2EB66533-4704-4635-86DA-DBD740F4CA37}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facebook.Infrastructure.Crosscutting.Logging.Diagnostics", "Src\Facebook.Infrastructure.Crosscutting.Logging.Diagnostics\Facebook.Infrastructure.Crosscutting.Logging.Diagnostics.csproj", "{4BB5D59C-5CBD-41FF-96EC-DB3FE2D25934}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facebook.Infrastructure.Crosscutting.Logging.Tests", "Tests\Facebook.Infrastructure.Crosscutting.Logging.Tests\Facebook.Infrastructure.Crosscutting.Logging.Tests.csproj", "{F0832446-9C61-419A-9065-C7582EA09082}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facebook.Data.EntityFramework.Tests", "Tests\Facebook.Data.EntityFramework.Tests\Facebook.Data.EntityFramework.Tests.csproj", "{FE60AE46-AD68-4669-B87D-DE2C80773662}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facebook.Business.Domain.Facade", "Src\Facebook.Business.Domain.Facade\Facebook.Business.Domain.Facade.csproj", "{0EF2763E-F218-47E0-B84C-3E38DD2C3D44}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facebook.Business.Domain.Facade.Tests", "Tests\Facebook.Business.Domain.Facade.Tests\Facebook.Business.Domain.Facade.Tests.csproj", "{44BBEDA7-69E3-4629-A470-43B55E7654C0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CB71CA96-8286-40C2-B027-ECA495F854FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB71CA96-8286-40C2-B027-ECA495F854FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB71CA96-8286-40C2-B027-ECA495F854FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB71CA96-8286-40C2-B027-ECA495F854FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A44AA0E3-2B23-4485-940E-013FC39307F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A44AA0E3-2B23-4485-940E-013FC39307F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A44AA0E3-2B23-4485-940E-013FC39307F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A44AA0E3-2B23-4485-940E-013FC39307F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2444546-E38B-4E73-BC01-B8EC0D468CF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2444546-E38B-4E73-BC01-B8EC0D468CF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2444546-E38B-4E73-BC01-B8EC0D468CF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2444546-E38B-4E73-BC01-B8EC0D468CF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F439B6EE-C6C1-471D-94CC-48FBF5F44CFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F439B6EE-C6C1-471D-94CC-48FBF5F44CFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F439B6EE-C6C1-471D-94CC-48FBF5F44CFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F439B6EE-C6C1-471D-94CC-48FBF5F44CFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4830AA13-EDFA-4611-AAAC-14B0EA8D532B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4830AA13-EDFA-4611-AAAC-14B0EA8D532B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4830AA13-EDFA-4611-AAAC-14B0EA8D532B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4830AA13-EDFA-4611-AAAC-14B0EA8D532B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A672FFA3-6AC2-4F3F-BA4B-34BF90AD1E90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A672FFA3-6AC2-4F3F-BA4B-34BF90AD1E90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A672FFA3-6AC2-4F3F-BA4B-34BF90AD1E90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A672FFA3-6AC2-4F3F-BA4B-34BF90AD1E90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B8DAA63-40E7-4A5E-96C2-2D21B0806BB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B8DAA63-40E7-4A5E-96C2-2D21B0806BB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B8DAA63-40E7-4A5E-96C2-2D21B0806BB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B8DAA63-40E7-4A5E-96C2-2D21B0806BB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02AB4E5D-49EF-4D38-8B8F-DBD1A902F72A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02AB4E5D-49EF-4D38-8B8F-DBD1A902F72A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02AB4E5D-49EF-4D38-8B8F-DBD1A902F72A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02AB4E5D-49EF-4D38-8B8F-DBD1A902F72A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA144558-E880-4BC6-AF9B-D8BF10455D72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA144558-E880-4BC6-AF9B-D8BF10455D72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA144558-E880-4BC6-AF9B-D8BF10455D72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA144558-E880-4BC6-AF9B-D8BF10455D72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EB66533-4704-4635-86DA-DBD740F4CA37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EB66533-4704-4635-86DA-DBD740F4CA37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EB66533-4704-4635-86DA-DBD740F4CA37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EB66533-4704-4635-86DA-DBD740F4CA37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BB5D59C-5CBD-41FF-96EC-DB3FE2D25934}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BB5D59C-5CBD-41FF-96EC-DB3FE2D25934}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BB5D59C-5CBD-41FF-96EC-DB3FE2D25934}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BB5D59C-5CBD-41FF-96EC-DB3FE2D25934}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0832446-9C61-419A-9065-C7582EA09082}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0832446-9C61-419A-9065-C7582EA09082}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0832446-9C61-419A-9065-C7582EA09082}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0832446-9C61-419A-9065-C7582EA09082}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE60AE46-AD68-4669-B87D-DE2C80773662}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE60AE46-AD68-4669-B87D-DE2C80773662}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE60AE46-AD68-4669-B87D-DE2C80773662}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE60AE46-AD68-4669-B87D-DE2C80773662}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EF2763E-F218-47E0-B84C-3E38DD2C3D44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EF2763E-F218-47E0-B84C-3E38DD2C3D44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EF2763E-F218-47E0-B84C-3E38DD2C3D44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EF2763E-F218-47E0-B84C-3E38DD2C3D44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44BBEDA7-69E3-4629-A470-43B55E7654C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44BBEDA7-69E3-4629-A470-43B55E7654C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44BBEDA7-69E3-4629-A470-43B55E7654C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44BBEDA7-69E3-4629-A470-43B55E7654C0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D2444546-E38B-4E73-BC01-B8EC0D468CF6} = {F37E3FB5-5B28-4385-9963-12843AF76ACC}
+		{0EF2763E-F218-47E0-B84C-3E38DD2C3D44} = {F37E3FB5-5B28-4385-9963-12843AF76ACC}
+		{44BBEDA7-69E3-4629-A470-43B55E7654C0} = {F37E3FB5-5B28-4385-9963-12843AF76ACC}
+		{CB71CA96-8286-40C2-B027-ECA495F854FD} = {10B5481E-5212-4047-9F29-E00E6EC24F61}
+		{A672FFA3-6AC2-4F3F-BA4B-34BF90AD1E90} = {10B5481E-5212-4047-9F29-E00E6EC24F61}
+		{02AB4E5D-49EF-4D38-8B8F-DBD1A902F72A} = {10B5481E-5212-4047-9F29-E00E6EC24F61}
+		{FE60AE46-AD68-4669-B87D-DE2C80773662} = {10B5481E-5212-4047-9F29-E00E6EC24F61}
+		{26715751-0F3A-4491-A834-2DF0FEA1C5A3} = {083F15E7-3200-4AC5-88EE-9D9E9829C2BB}
+		{84E4733D-2FF0-4C64-A338-4ED15C47CC0B} = {7CD48187-2B49-4019-B5B8-35931A4D9D2A}
+		{97FBD77F-7C23-4BB1-B1B4-CD1E520F94EB} = {7CD48187-2B49-4019-B5B8-35931A4D9D2A}
+		{605BF081-6E37-4308-A2F5-53B6AA3A64F4} = {7CD48187-2B49-4019-B5B8-35931A4D9D2A}
+		{FA144558-E880-4BC6-AF9B-D8BF10455D72} = {26715751-0F3A-4491-A834-2DF0FEA1C5A3}
+		{2EB66533-4704-4635-86DA-DBD740F4CA37} = {26715751-0F3A-4491-A834-2DF0FEA1C5A3}
+		{F439B6EE-C6C1-471D-94CC-48FBF5F44CFB} = {84E4733D-2FF0-4C64-A338-4ED15C47CC0B}
+		{4830AA13-EDFA-4611-AAAC-14B0EA8D532B} = {84E4733D-2FF0-4C64-A338-4ED15C47CC0B}
+		{4BB5D59C-5CBD-41FF-96EC-DB3FE2D25934} = {84E4733D-2FF0-4C64-A338-4ED15C47CC0B}
+		{F0832446-9C61-419A-9065-C7582EA09082} = {84E4733D-2FF0-4C64-A338-4ED15C47CC0B}
+		{A44AA0E3-2B23-4485-940E-013FC39307F4} = {97FBD77F-7C23-4BB1-B1B4-CD1E520F94EB}
+		{4B8DAA63-40E7-4A5E-96C2-2D21B0806BB3} = {605BF081-6E37-4308-A2F5-53B6AA3A64F4}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.2\lib\NET35
+	EndGlobalSection
+EndGlobal
